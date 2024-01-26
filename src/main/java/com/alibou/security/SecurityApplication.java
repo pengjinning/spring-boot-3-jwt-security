@@ -1,7 +1,15 @@
+/*
+ * @Author: jack ning github@bytedesk.com
+ * @Date: 2024-01-16 21:02:34
+ * @LastEditors: jack ning github@bytedesk.com
+ * @LastEditTime: 2024-01-26 17:42:11
+ * @FilePath: /spring-boot-3-jwt-security/src/main/java/com/alibou/security/SecurityApplication.java
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 package com.alibou.security;
 
 import com.alibou.security.auth.AuthenticationService;
-import com.alibou.security.auth.RegisterRequest;
+// import com.alibou.security.auth.RegisterRequest;
 // import com.alibou.security.user.Role;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -22,26 +30,27 @@ public class SecurityApplication {
 
 	@Bean
 	public CommandLineRunner commandLineRunner(
-			AuthenticationService service
-	) {
+			AuthenticationService service) {
 		return args -> {
 			// var admin = RegisterRequest.builder()
-			// 		.firstname("Admin")
-			// 		.lastname("Admin")
-			// 		.email("admin@mail.com")
-			// 		.password("password")
-			// 		.role(ADMIN)
-			// 		.build();
-			// System.out.println("Admin token: " + service.register(admin).getAccessToken());
+			// .firstname("Admin")
+			// .lastname("Admin")
+			// .email("admin@mail.com")
+			// .password("password")
+			// .role(ADMIN)
+			// .build();
+			// System.out.println("Admin token: " +
+			// service.register(admin).getAccessToken());
 
 			// var manager = RegisterRequest.builder()
-			// 		.firstname("Admin")
-			// 		.lastname("Admin")
-			// 		.email("manager@mail.com")
-			// 		.password("password")
-			// 		.role(MANAGER)
-			// 		.build();
-			// System.out.println("Manager token: " + service.register(manager).getAccessToken());
+			// .firstname("Admin")
+			// .lastname("Admin")
+			// .email("manager@mail.com")
+			// .password("password")
+			// .role(MANAGER)
+			// .build();
+			// System.out.println("Manager token: " +
+			// service.register(manager).getAccessToken());
 		};
 	}
 }
