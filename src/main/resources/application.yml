@@ -1,18 +1,22 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/jwt_security
-    username: username
-    password: password
-    driver-class-name: org.postgresql.Driver
+    # url: jdbc:postgresql://localhost:5432/jwt_security
+    url: jdbc:mysql://127.0.0.1:3306/jwt_security
+    username: root
+    password: C8aJEVCCvSA1VFi8
+    # driver-class-name: org.postgresql.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: create-drop
-    show-sql: false
+      ddl-auto: update
+    show-sql: true
     properties:
       hibernate:
-        format_sql: true
-    database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: false
+    # database: postgresql
+    database: mysql
+    # database-platform: org.hibernate.dialect.PostgreSQLDialect
+    # database-platform: org.hibernate.dialect.MySQL8Dialect
 
 application:
   security:
@@ -21,3 +25,6 @@ application:
       expiration: 86400000 # a day
       refresh-token:
         expiration: 604800000 # 7 days
+
+server:
+  port: 9010
